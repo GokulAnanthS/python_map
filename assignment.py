@@ -1,4 +1,4 @@
-import pandas as pd
+# referenced https://realpython.com/python-matplotlib-guide/#understanding-pltsubplots-notation
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 # reading the CSV fie
@@ -21,14 +21,16 @@ df = df[(df['Longitude'] >= bounding_box['min_lon']) & (df['Longitude'] <= bound
 
 image_path = 'map7.png'
 uk_map_img = mpimg.imread(image_path)
+
 # Create a scatter plot with color mapping
 fig, ax = plt.subplots(figsize=(10, 6))
-
 ax.scatter(df["Longitude"], df["Latitude"], color="fuchsia")
 ax.imshow(uk_map_img, extent=(-10.592, 1.6848, 50.681, 57.985))
+
 # Set labels and title
 plt.xlabel('Longitude')
 plt.ylabel('Latitude')
 plt.title('Plotting the GROW data')
+
 # Show the plot
 plt.show()
