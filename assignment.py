@@ -1,6 +1,7 @@
 # referenced https://realpython.com/python-matplotlib-guide/#understanding-pltsubplots-notation
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
+import pandas as pd
 # reading the CSV fie
 df = pd.read_csv("GrowLocations.csv")
 
